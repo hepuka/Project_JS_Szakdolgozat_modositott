@@ -1,1 +1,6 @@
-# szakdolgozat_regi
+Szakdolgozat
+
+project indítása: 
+
+npm install
+npm start

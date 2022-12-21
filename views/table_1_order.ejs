@@ -1,0 +1,29 @@
+<%- include('include/_header.ejs') %>
+<%- include('include/_navbartable_1_order.ejs') %>
+
+
+          <div class="container">
+
+                <h3 class="cim text-secondary">Rendelés összesítő</h3>   
+                               
+                    <table id = 'dsTable' class="table">
+                        <thead>
+                          <tr>
+                            <th class="col-2">Sorszám</th>
+                            <th class="col-2">Termék</th>
+                            <th class="col-2">Mennyiség</th>
+                            <th class="col-2">Egységár</th>
+                            <th class="col-2">Asztal</th>
+                            <th class="col-2">Műveletek</th>                            
+                          </tr>
+                        
+                        </thead>
+                        <tbody id="table">
+            
+                        </tbody>
+                      </table>
+        
+        </div>
+
+<script src="\js\table_1_order.js"></script>
+<%- include('include/_footer.ejs') %>
