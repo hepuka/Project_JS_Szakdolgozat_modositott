@@ -1,19 +1,58 @@
-<%- include('include/_header.ejs') %>
-<%- include('include/_navbar.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>KUNPAO's COFFEE MANAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <%- include('include/header_admin.ejs') %>
+      <div class="content_data">
+        <h2>Új kávétermék felvétele</h2>
+        <form action="/api/kavek" method="POST" id="add_kave" class="form">
+          <label for="name"> <span>Név</span> </label>
+          <input
+            type="text"
+            placeholder="Add meg a termék nevét!"
+            name="name"
+            id="name"
+            required
+          />
 
-  <main id="site-main">
-      <div class="container">
-        <h3 class="text-center mb-3">
-           Új Kávé felvétele
-         </h3>
-                    
-              <form action="/api/kavek" method="POST" id="add_kave">
+          <label for="kiszereles"> <span>Kiszerelés</span> </label>
+          <input
+            type="text"
+            placeholder="Add meg a termék kiszerelését!"
+            name="kiszereles"
+            id="kiszereles"
+            required
+          />
 
-                <%- include('include/_ujtermekform.ejs') %>
-                
-            </form>
+          <label for="price"> <span>Egységár</span> </label>
+
+          <input
+            type="number"
+            placeholder="Add meg a termék egységárát (forint nélkül)"
+            name="price"
+            id="price"
+            required
+          />
+
+          <button id="button" type="submit">Mentés</button>
+        </form>
+      </div>
     </div>
-</main>
-
-<%- include('include/_footer.ejs') %>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

@@ -20,8 +20,8 @@ function tdorder_fun({ _id, orderid, vegosszeg, time, table }) {
       
         <td class="col-3" style="padding-top: 15px; border: none;text-align: center">${time}</td>
         <td style="text-align:center;border:none">                                
-            <a class="btn btn-dark" href="/orders/delete/${_id}">Törlés</a></td>
-        </td></td>
+            Sikeres fizetés</td>
+
 
     </tr>
         `;

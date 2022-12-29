@@ -1,40 +1,43 @@
-<%- include('include/_header.ejs') %>
-<div class="welcome">
-  <h1 style="margin-top: 200px;">BEJELENTKEZÉS</h1>
-    
-  </div>
- <div class="login d-flex justify-content-center">
- <div class="loginplace">
-    <div class="col-md-6 m-auto">
-        <form action="/users/login" method="POST">
-          <div class="form-group">
-            <label for="username" class="form-label">Felhasználónév</label>
-            <input
-              type="username"
-              id="username"
-              name="username"
-              class="form-control"
-              placeholder="Add meg a felhasználóneved"                           
-            />
-          </div>
-          <div class="form-group">
-            <label for="password" class="form-label">Jelszó</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              placeholder="Add meg a jelszavad"
-            />
-          </div>
-          <div class="button">
-            <div class="row justify-content-center">  
-              <button type="submit" class="btn btn-secondary btn-block col-6">Belépés</button>          
-            </div>  
-          </div> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>KUNPAO's COFFEE</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <h1 class="login">KUNPAO's COFFEE MANAGEMENT SYSTEM</h1>
+        <img src="/img/cafe_avatar.png" alt="" />
+        <form action="/users/login" method="POST" class="form">
+          <label for="username"
+            ><span id="loginspan">Felhasználónév</span></label
+          >
+          <input
+            type="text"
+            placeholder="Add meg a felhasználónevet"
+            name="username"
+            id="username"
+            required
+          />
+          <label for="password"><span id="loginspan">Jelszó</span></label>
+          <input
+            type="password"
+            placeholder="Add meg a jelszót"
+            name="password"
+            id="password"
+            required
+          />
+          <button id="button" type="submit">Belépés</button>
         </form>
+      </div>
     </div>
-  </div>  
-</div>
-
-<%- include('include/_footer.ejs') %>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>
