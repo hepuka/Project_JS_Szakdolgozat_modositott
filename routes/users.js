@@ -7,14 +7,14 @@ router.get("/login", forwardAuthenticated, (req, res) => res.render("login"));
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", function (err, user) {
     if (err) {
-      res.redirect("/login");
+      res.redirect("/users/login");
     } else {
       if (!user) {
-        res.redirect("/login");
+        res.redirect("/users/login");
       } else {
         req.login(user, function (err) {
           if (err) {
-            res.redirect("/login");
+            res.redirect("/users/login");
           } else {
             if (user.role == "Admin") {
               res.redirect("/chief");
